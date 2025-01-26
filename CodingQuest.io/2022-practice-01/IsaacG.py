@@ -32,9 +32,10 @@ def solve(data: str) -> int:
 
 
 if __name__ == "__main__":
+    day_num = int(pathlib.Path(__file__).parent.stem.split("-")[-1]) + 12
     paths = [
         pathlib.Path(__file__).parent / "example_data",
-        pathlib.Path(os.getenv("HOME")) / "coding_quest_inputs" / "13.txt",
+        pathlib.Path(os.getenv("HOME")) / "coding_quest_inputs" / f"{day_num}.txt",
     ]
     for path in paths:
         data = path.read_text()
